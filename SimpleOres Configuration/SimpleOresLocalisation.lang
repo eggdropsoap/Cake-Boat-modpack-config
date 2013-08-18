@@ -1,0 +1,229 @@
+# Configuration file
+
+####################
+# achievement descriptions
+####################
+
+"achievement descriptions" {
+    S:AdamantiumAchievement=Dig deep to find some Adamantium.
+    S:AdamantiumPickAchievement=Make an Adamantium Pickaxe to dig faster than ever.
+    S:BronzeAchievement=Craft you first alloy, a Bronze Ingot.
+    S:FusionFurnaceAchievement=Craft a Fusion Furnace to open up new possibilities.
+    S:IronPickAchievement=Construct an Iron Pickaxe.
+    S:MythrilBowAchievement=Forge a new bow with magical properties.
+    S:OnyxAchievement=Good luck finding some.
+    S:OnyxBowAchievement=Scorch your enemies with this bow from the Hells.
+    S:OnyxPickAchievement=There's a good chance it will out-live you.
+    S:SimpleOresAchievement=Begin your SimpleOres adventure by collection some Copper.
+}
+
+
+####################
+# achievement names
+####################
+
+"achievement names" {
+    S:AdamantiumAchievement=The Green One
+    S:AdamantiumPickAchievement=Lighting Fast!
+    S:BronzeAchievement=My First Fusion
+    S:FusionFurnaceAchievement=Coalescence
+    S:IronPickAchievement=Upgrade MK II
+    S:MythrilBowAchievement=Mystical Bow
+    S:OnyxAchievement=The Camouflaged Ore
+    S:OnyxBowAchievement=Firebug
+    S:OnyxPickAchievement=The Unbreakable
+    S:SimpleOresAchievement=Welcome to SimpleOres!
+}
+
+
+####################
+# armor names
+####################
+
+"armor names" {
+    S:AdamantiumBootsName=Adamantium Boots
+    S:AdamantiumChestName=Adamantium Chestplate
+    S:AdamantiumHelmName=Adamantium Helmet
+    S:AdamantiumLegsName=Adamantium Leggings
+    S:BronzeBootsName=Bronze Boots
+    S:BronzeChestname=Bronze Chestplate
+    S:BronzeHelmName=Bronze Helmet
+    S:BronzeLegsName=Bronze Leggings
+    S:CopperBootsName=Copper Boots
+    S:CopperChestname=Copper Chestplate
+    S:CopperHelmName=Copper Helmet
+    S:CopperLegsName=Copper Leggings
+    S:MythrilBootsName=Mythril Boots
+    S:MythrilChestName=Mythril Chestplate
+    S:MythrilHelmName=Mythril Helmet
+    S:MythrilLegsName=Mythril Leggings
+    S:OnyxBootsName=Onyx Boots
+    S:OnyxChestName=Onyx Chestplate
+    S:OnyxHelmName=Onyx Helmet
+    S:OnyxLegsName=Onyx Leggings
+    S:SinisiteBootsName=Sinisite Boots
+    S:SinisiteChestname=Sinisite Chestplate
+    S:SinisiteHelmName=Sinisite Helmet
+    S:SinisiteLegsName=Sinisite Leggings
+    S:ThyriumBootsName=Thyrium Boots
+    S:ThyriumChestname=Thyrium Chestplate
+    S:ThyriumHelmName=Thyrium Helmet
+    S:ThyriumLegsName=Thyrium Leggings
+    S:TinBootsName=Tin Boots
+    S:TinChestname=Tin Chestplate
+    S:TinHelmName=Tin Helmet
+    S:TinLegsName=Tin Leggings
+}
+
+
+####################
+# block names
+####################
+
+"block names" {
+    S:AdamantiumBarsName=Adamantium Bars
+    S:AdamantiumBlockName=Adamantium Block
+    S:AdamantiumOreName=Adamantium Ore
+    S:BronzeBlockName=Bronze Block
+    S:CopperBarsName=Copper Bars
+    S:CopperBlockName=Copper Block
+    S:CopperDoorName=Copper Door
+    S:CopperOreName=Copper Ore
+    S:FusionFurnaceName=Fusion Furnace
+    S:FusionFurnaceOnName=Fusion Furnace
+    S:MythrilBarsName=Mythril Bars
+    S:MythrilBlockName=Mythril Block
+    S:MythrilFurnaceName=Mythril Furnace
+    S:MythrilFurnaceOnName=Mythril Furnace
+    S:MythrilOreName=Mythril Ore
+    S:OnyxBarsName=Onyx Bars
+    S:OnyxBlockName=Onyx Block
+    S:OnyxDoorName=Onyx Door
+    S:OnyxFurnaceName=Onyx Furnace
+    S:OnyxFurnaceOnName=Onyx Furnace
+    S:OnyxOreName=Onyx Ore
+    S:SinisiteBlockName=Sinisite Block
+    S:ThyriumBlockName=Thyrium Block
+    S:TinBarsName=Tin Bars
+    S:TinBlockName=Tin Block
+    S:TinOreName=Tin Ore
+}
+
+
+####################
+# bow tooltip
+####################
+
+"bow tooltip" {
+    S:EfficiencyTooltip=+Efficiency
+    S:FlameTooltip=+Flame
+}
+
+
+####################
+# bow tooltips
+####################
+
+"bow tooltips" {
+    S:DamageTooltip=+Damage
+    S:KnockbackTooltip=+Knockback
+    S:ZoomTooltip=+Zoom
+}
+
+
+####################
+# item names
+####################
+
+"item names" {
+    S:AdamantiumIngotName=Adamantium Ingot
+    S:BronzeChunkLargeName=Large Bronze Chunk
+    S:BronzeChunkMediumName=Medium Bronze Chunk
+    S:BronzeChunkSmallName=Small Bronze Chunk
+    S:BronzeIngotName=Bronze Ingot
+    S:CopperBucketName=Copper Bucket
+    S:CopperBucketWaterName=Copper Bucket of Water
+    S:CopperDoorName=Copper Door
+    S:CopperIngotName=Copper Ingot
+    S:MythrilIngotName=Mythril Ingot
+    S:MythrilRodName=Mythril Rod
+    S:OnyxDoorName=Onyx Door
+    S:OnyxGemName=Onyx Gem
+    S:OnyxRodName=Onyx Rod
+    S:SinisiteChunkLargeName=Large Sinisite Chunk
+    S:SinisiteChunkMediumName=Medium Sinisite Chunk
+    S:SinisiteChunkSmallName=Small Sinisite Chunk
+    S:SinisiteIngotName=Sinisite Ingot
+    S:SinisiteRodName=Sinisite Rod
+    S:ThyriumChunkLargeName=Large Thyrium Chunk
+    S:ThyriumChunkMediumName=Medium Thyrium Chunk
+    S:ThyriumChunkSmallName=Small Thyrium Chunk
+    S:ThyriumIngotName=Thyrium Ingot
+    S:ThyriumRodName=Thyrium Rod
+    S:TinIngotName=Tin Ingot
+}
+
+
+####################
+# tool names
+####################
+
+"tool names" {
+    S:AdamantiumAxeName=Adamantium Axe
+    S:AdamantiumHoeName=Adamantium Hoe
+    S:AdamantiumPickName=Adamantium Pickaxe
+    S:AdamantiumShearsName=Adamantium Shears
+    S:AdamantiumShovelName=Adamantium Shovel
+    S:BronzeAxeName=Bronze Axe
+    S:BronzeHoeName=Bronze Hoe
+    S:BronzePickName=Bronze Pickaxe
+    S:BronzeShovelName=Bronze Shovel
+    S:CopperAxeName=Copper Axe
+    S:CopperHoeName=Copper Hoe
+    S:CopperPickName=Copper Pickaxe
+    S:CopperShovelName=Copper Shovel
+    S:MythrilAxeName=Mythril Axe
+    S:MythrilHoeName=Mythril Hoe
+    S:MythrilPickName=Mythril Pickaxe
+    S:MythrilShovelName=Mythril Shovel
+    S:OnyxAxeName=Onyx Axe
+    S:OnyxHoeName=Onyx Hoe
+    S:OnyxPickName=Onyx Pickaxe
+    S:OnyxShearsName=Onyx Shears
+    S:OnyxShovelName=Onyx Shovel
+    S:SinisiteAxeName=Sinisite Axe
+    S:SinisiteHoeName=Sinisite Hoe
+    S:SinisitePickName=Sinisite Pickaxe
+    S:SinisiteShovelName=Sinisite Shovel
+    S:ThyriumAxeName=Thyrium Axe
+    S:ThyriumHoeName=Thyrium Hoe
+    S:ThyriumPickName=Thyrium Pickaxe
+    S:ThyriumShovelName=Thyrium Shovel
+    S:TinAxeName=Tin Axe
+    S:TinHoeName=Tin Hoe
+    S:TinPickName=Tin Pickaxe
+    S:TinShearsName=Tin Shears
+    S:TinShovelName=Tin Shovel
+}
+
+
+####################
+# weapon names
+####################
+
+"weapon names" {
+    S:AdamantiumSwordName=Adamantium Sword
+    S:BronzeSwordName=Bronze Sword
+    S:CopperSwordName=Copper Sword
+    S:MythrilBowName=Mythril Bow
+    S:MythrilSwordName=Mythril Sword
+    S:OnyxBowName=Onyx Bow
+    S:OnyxSwordName=Onyx Sword
+    S:SinisiteBowName=Sinisite Bow
+    S:SinisiteSwordName=Sinisite Sword
+    S:ThyriumBowName=Thyrium Bow
+    S:ThyriumSwordName=Thyrium Sword
+    S:TinSwordName=Tin Sword
+}
+
+
