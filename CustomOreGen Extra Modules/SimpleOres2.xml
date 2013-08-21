@@ -204,53 +204,6 @@
 		</ConfigSection>           
 
         
-        <!--******************   Uranium   *********************-->
-		<!--
-        <ConfigSection>
-        
-            <OptionChoice name='ic2UraniumDist' displayState='shown' displayGroup='groupIC2'>
-                <Description> Controls how IndustrialCraft^2 Uranium is generated </Description>
-                <DisplayName>IC2 Uranium Type</DisplayName>
-                <Default>:= if(blockExists("blockOreUran"),"layeredVeins","disabled")</Default>
-                <Choice value='layeredVeins' displayValue='Veins'>
-                    <Description> 
-                        Isolated veins found about two thirds of the way down to bedrock and only sparsely filled with ore.  Unusually common in devestated wastelands (ExtraBiomesXL).
-                    </Description>
-                </Choice>
-                <Choice value='strategicClouds' displayValue='Clouds'>
-                    <Description> 
-                        Rare, sparsely populated clouds of ore extending over one or two chunks.  Can be found anywhere, but most common in devestated wastelands (ExtraBiomesXL).
-                    </Description>
-                </Choice>
-                <Choice value='vanillaStdGen' displayValue='Clusters'>
-                    <Description> 
-                        Small evenly scattered clusters of ore.  This is the default IC2 uranium generation.
-                    </Description>
-                </Choice>
-                <Choice value='none' displayValue='None' description='No uranium is generated at all.'/>
-                <Choice value='disabled' displayValue='Disabled' description='No uranium is generated, and no uranium symbols are available in Mystcraft ages.'/>
-            </OptionChoice>
-            
-            <OptionNumeric name='ic2UraniumFreq' default='1'  min='0' max='5' displayState='hidden' displayGroup='groupIC2'>
-                <Description> Frequency multiplier for IndustrialCraft^2 Uranium distributions </Description>
-                <DisplayName>IC2 Uranium Freq.</DisplayName>
-            </OptionNumeric>
-            
-            <OptionNumeric name='ic2UraniumSize' default='1'  min='0' max='5' displayState='hidden' displayGroup='groupIC2'>
-                <Description> Size multiplier for IndustrialCraft^2 Uranium distributions </Description>
-                <DisplayName>IC2 Uranium Size</DisplayName>
-            </OptionNumeric>
-            
-            <IfCondition condition=':= ic2UraniumDist != "disabled"'>
-                <MystcraftSymbol name='ic2UraniumClusters' displayName='Uranium Clusters'/>
-                <MystcraftSymbol name='ic2UraniumVeins' displayName='Uranium Veins'/>
-                <MystcraftSymbol name='ic2UraniumClouds' displayName='Uranium Clouds'>
-                    <Instability>:= 50 * (age.ic2UraniumClusters + age.ic2UraniumVeins + age.ic2UraniumClouds - 1)^3</Instability>
-                </MystcraftSymbol>
-            </IfCondition>
-            
-        </ConfigSection>           
-		-->
         
      </ConfigSection>    
    
@@ -558,72 +511,6 @@
         </ConfigSection>
 
 		
-        <!--******************   Uranium   *********************-->            
-		<!--
-        <ConfigSection>
-        
-            <IfCondition condition=':= if(age, age.ic2UraniumClusters > 0, ic2UraniumDist = "vanillaStdGen")'>
-                <StandardGen name='IC2UraniumStandard' block='blockOreUran' inherits='PresetStandardGen'> 
-                    <Description> Equivalent to regular IC2 uranium distribution </Description>
-                    <DrawWireframe>:=drawWireframes</DrawWireframe>
-                    <WireframeColor>0x4080FF00</WireframeColor> 
-                    <Setting name='Size' avg=':= 0.375 * ic2UraniumSize * _default_'/> 
-                    <Setting name='Frequency' avg=':= 1.0 * ic2UraniumFreq * if(age,age.ic2UraniumClusters,1) * _default_' 
-                                               range=':= 4.5 * ic2UraniumFreq * if(age,age.ic2UraniumClusters,1)'/>
-                    <Setting name='Height' avg=':= 32/64 * dimension.groundLevel' range=':= 32/64 * dimension.groundLevel' type='uniform'/> 
-                </StandardGen>
-            </IfCondition>   
-            
-            <IfCondition condition=':= if(age, age.ic2UraniumVeins > 0, ic2UraniumDist = "layeredVeins")'>    
-                <Veins name='IC2UraniumVeins' block='blockOreUran' inherits='PresetSparseVeins'>    
-                    <Description>
-                        Sparse veins in the 10-30 range.
-                    </Description>
-                    <DrawWireframe>:=drawWireframes</DrawWireframe>
-                    <WireframeColor>0x4080FF00</WireframeColor>
-                    <Setting name='MotherlodeFrequency' avg=':= 3.0 * ic2UraniumFreq * if(age,age.ic2UraniumVeins,1) * _default_'/>
-                    <Setting name='MotherlodeSize' avg=':= 0.6 * ic2UraniumSize * _default_' range=':= 0.6 * ic2UraniumSize * _default_'/>
-                    <Setting name='MotherlodeHeight' avg=':= 20/64 * dimension.groundLevel' range=':= 10/64 * dimension.groundLevel'/>
-                    <Setting name='BranchLength' avg=':= 0.75 * _default_' range=':= 0.75 * _default_'/>
-                    <Setting name='BranchInclination' avg='0' range='0.35'/>
-                    <Setting name='BranchHeightLimit' avg='12'/>
-                    <Setting name='SegmentRadius' avg=':= 0.6 * ic2UraniumSize * _default_' range=':= 0.6 * ic2UraniumSize * _default_'/>
-                    <Setting name='OreDensity' avg=':= 1.85 * _default_' range=':= _default_'/>
-                </Veins>
-                <Veins name='IC2UraniumVeinsWasteland' inherits='IC2UraniumVeins'>
-                    <Description>  This roughly triples the chance of finding uranium in an ExtraBiomes wasteland. </Description>      
-                    <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
-                    <Setting name='MotherlodeHeight' avg=':= _default_' range=':= 2 * _default_'/>
-                    <Setting name='BranchHeightLimit' avg=':= 2 * _default_'/> 
-                    <Biome name='Wasteland'/> <Comment> ExtraBiomesXL </Comment>
-                </Veins>
-            </IfCondition>     
-            
-            <IfCondition condition=':= if(age, age.ic2UraniumClouds > 0, ic2UraniumDist = "strategicClouds")'>
-                <Cloud name='IC2UraniumCloud' block='blockOreUran' inherits='PresetStrategicCloud'>
-                    <Description>  
-                        Diffuse uranium cloud surrounded by single-block "hint" veins, found mostly in ExtraBiomes wasteland biomes.
-                    </Description> 
-                    <DrawWireframe>:=drawWireframes</DrawWireframe>
-                    <WireframeColor>0x4044FF00</WireframeColor> 
-                    <Setting name='DistributionFrequency' avg=':= 4 * ic2UraniumFreq * if(age,age.ic2UraniumClouds,1) * _default_'/>
-                    <Setting name='CloudRadius' avg=':= 0.5 * ic2UraniumSize * _default_' range=':= 0.5 * ic2UraniumSize * _default_'/>
-                    <Setting name='CloudThickness' avg=':= 0.5 * ic2UraniumSize * _default_' range=':= 0.5 * ic2UraniumSize * _default_'/>                
-                    <Setting name='OreVolumeNoiseCutoff' avg='0'/>
-                    <Setting name='OreDensity' avg=':= 1.1 * _default_'/>
-                    <Biome name='.*' weight='0.2'/>
-                    <Biome name='Wasteland'/> <Comment> ExtraBiomesXL </Comment>
-                    <Veins name='IC2UraniumHintVeins' block='blockOreUran' inherits='PresetHintVeins'>
-                        <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x4080FF00</WireframeColor>
-                        <Setting name='MotherlodeFrequency' avg=':= _default_' range=':= _default_'/>   
-                        <Setting name='MotherlodeRangeLimit' avg=':= 0.5 * ic2UraniumSize * _default_' range=':= 0.5 * ic2UraniumSize * _default_'/>              
-                    </Veins>
-                </Cloud>
-            </IfCondition>  
-            
-        </ConfigSection>
-        -->
 		
     </IfCondition>
     
